@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon panier | Atelier Maison</title>
+  <link rel="stylesheet" href="stylepanier.css">
+  <script src="panierscript.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-left">
+      <a href="#">Accueil</a><a href="#">Collection</a><a href="#">Contact</a>
+    </nav>
+    <a class="brand" href="#" aria-label="Atelier Maison">▣ <span>ATELIER</span></a>
+    <nav class="nav-right">
+      <a href="#">Boutiques</a><a href="#">Mon compte</a><a href="#" aria-label="Recherche">⌕</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb">⌂ <span>›</span> Accueil <span>›</span> Collection <span>›</span> <strong>Mon panier</strong></div>
+
+    <section class="intro">
+      <p class="eyebrow">VOTRE SÉLECTION</p>
+      <h1>Votre panier</h1>
+      <p class="subtitle">Les meubles que vous aimez, réunis au même endroit.</p>
+    </section>
+
+    <div class="cart-layout">
+      <section class="cart-panel">
+        <div class="panel-heading">
+          <h2>Articles <span id="item-count">(3)</span></h2>
+          <button class="text-button" id="clear-cart">Vider le panier</button>
+        </div>
+        <div id="cart-items"></div>
+        <div id="empty-cart" class="empty-state" hidden>
+          <div class="empty-icon">♡</div>
+          <h3>Votre panier est vide</h3>
+          <p>Ajoutez un article de notre collection pour commencer.</p>
+          <button class="dark-button" id="continue-shopping">Continuer mes achats</button>
+        </div>
+      </section>
+
+      <aside class="summary">
+        <h2>Résumé de la commande</h2>
+        <div class="summary-line"><span>Sous-total</span><strong id="subtotal">0,000 DT</strong></div>
+        <div class="summary-line"><span>Livraison</span><strong id="shipping">0,000 DT</strong></div>
+        <p class="shipping-note" id="shipping-note">Choisissez votre mode de réception.</p>
+        <hr>
+        <h3>Mode de réception</h3>
+        <label class="choice">
+          <input type="radio" name="delivery" value="pickup" checked>
+          <span class="choice-copy"><strong>Retrait sur place</strong><small>Récupérez votre commande en boutique</small></span>
+          <b>Gratuit</b>
+        </label>
+        <label class="choice">
+          <input type="radio" name="delivery" value="delivery">
+          <span class="choice-copy"><strong>Livraison à domicile</strong><small>Livraison partout en Tunisie</small></span>
+          <b>7,000 DT</b>
+        </label>
+        <hr>
+        <div class="total-line"><span>Total</span><strong id="total">0,000 DT</strong></div>
+        <h3 class="payment-title">Mode de paiement</h3>
+        <label class="payment-choice"><input type="radio" name="payment" value="onsite" checked> Paiement sur place</label>
+        <label class="payment-choice"><input type="radio" name="payment" value="delivery"> Paiement à la livraison</label>
+        <button class="dark-button checkout" id="checkout">Valider la commande <span>→</span></button>
+        <p class="secure-note">Commande de démonstration — aucun paiement réel.</p>
+      </aside>
+    </div>
+
+    <p class="continue-link"><a href="#">← Continuer vos achats</a></p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
